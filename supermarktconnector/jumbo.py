@@ -16,7 +16,7 @@ class JumboConnector:
             raise PaginationLimitReached('Pagination limit on Jumbo connector of 30')
 
         response = requests.get(
-            'https://mobileapi.jumbo.com/v12/search',
+            'https://mobileapi.jumbo.com/v14/search',
             headers=HEADERS,
             params={"offset": page * size, "limit": size, "q": query},
         )
